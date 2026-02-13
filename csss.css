@@ -1,0 +1,32 @@
+.gallery {
+  margin-top: 28px;
+  max-width: 880px;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.05);
+}
+
+/* Make the layout stack nicely on phones */
+@media (max-width: 600px) {
+  .gallery img {
+    height: 100px;
+  }
+}
